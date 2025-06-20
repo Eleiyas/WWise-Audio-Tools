@@ -65,8 +65,8 @@ namespace WWise_Audio_Tools.Forms
             string[] files = Directory.GetFiles(InputDirectory);
             var result = new ConcurrentBag<string>();
 
-            string[] keyNames = { "_sourceNames", "SourceNames", "sourceNames", "OFEEIPOMNKD", "EIKJKDICKMJ", "DHMACMBAEHG" };
-            string[] fieldNames = { "sourceFileName", "CBGLAJNLFCB", "HLGOMILNFNK", "NCPBJNJNCEI" };
+            string[] keyNames = { "_sourceNames", "SourceNames", "sourceNames", "OFEEIPOMNKD", "EIKJKDICKMJ", "DHMACMBAEHG", "FOLFEPNIKEC", "FONIFKPLDGC" };
+            string[] fieldNames = { "sourceFileName", "CBGLAJNLFCB", "HLGOMILNFNK", "NCPBJNJNCEI", "HPAJGPIFDKB", "POLDPGADMOJ" };
 
             await Task.WhenAll(files.Select(async fileName =>
             {

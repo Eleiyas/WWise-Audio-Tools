@@ -581,7 +581,7 @@ namespace WWise_Audio_Tools
                     {
                         StatusTextBox.SelectionColor = Color.Orange;
                         StatusTextBox.AppendText("> " + "MD5-Checksum Changed: " + outputLine + Environment.NewLine);
-                        processedFileHashes[outputLine] = (fileHash, DateTime.Now.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture));
+                        processedFileHashes[outputLine] = (fileHash, DateTime.Now.ToString("dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture));
                         changesMade = true;
                     }
                     //This small piece of code should make it so existing files with identical checksums get deleted prior to conversion.
@@ -596,7 +596,7 @@ namespace WWise_Audio_Tools
                 {
                     StatusTextBox.SelectionColor = Color.Green;
                     StatusTextBox.AppendText("> " + "New MD5-Checksum Generated: " + outputLine + Environment.NewLine);
-                    processedFileHashes[outputLine] = (fileHash, DateTime.Now.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture));
+                    processedFileHashes[outputLine] = (fileHash, DateTime.Now.ToString("dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture));
                     changesMade = true;
                 }
             }
@@ -609,7 +609,7 @@ namespace WWise_Audio_Tools
                     {
                         var parts = line.Split(',');
                         var dateStr = parts[2].Trim();
-                        var date = DateTime.ParseExact(dateStr, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                        var date = DateTime.ParseExact(dateStr, "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
                         return date;
                     })
                     .ThenBy(line =>
